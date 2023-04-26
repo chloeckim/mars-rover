@@ -7,7 +7,7 @@ function Home() {
 	return (
 		<CssBaseline>
 			<main>
-				<Header title="Mars Rovers" subtitle="Over the years, NASA has sent multiple robotic vehicles, called rovers, to Mars. Each rover has its own set of photos stored in the database." />
+				<Header title="Mars Rovers" subtitle="Over the years, NASA has sent multiple robotic vehicles, called rovers, to Mars. Each rover has its own set of photos stored in the database. Explore the Mars rovers and the photos taken by them." />
 				<RoverGrid />
 			</main>
 		</CssBaseline>

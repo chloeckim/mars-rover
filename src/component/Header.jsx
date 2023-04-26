@@ -17,14 +17,14 @@ function Header(props) {
       <Container maxWidth="sm">
         <Typography
           component="h1"
-          variant="h2"
+          variant="h3"
           align="center"
           color="text.primary"
           gutterBottom
         >
           {props.title}
         </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" paragraph>
+        <Typography variant="subtitle1" align="center" color="text.secondary" paragraph>
           {props.subtitle}
         </Typography>
       </Container>

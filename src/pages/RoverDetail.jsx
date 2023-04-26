@@ -18,7 +18,7 @@ function RoverDetail() {
   return (
     <CssBaseline>
       <main>
-        <Header title={`Rover: ${capitalizedName}`} subtitle={`Photos taken by ${capitalizedName} rover. Use the date picker to choose a different date.`} />
+        <Header title={`${capitalizedName}`} subtitle={`Photos taken by ${capitalizedName} rover. Use the date picker to choose a different date.`} />
         <Container sx={{ pb: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }} maxWidth="sm">
           <DatePicker defaultValue={date} value={date} onChange={(newValue) => setDate(newValue)} />
         </Container>
