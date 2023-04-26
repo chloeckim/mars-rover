@@ -15,7 +15,7 @@ function RoverCard(props) {
 
   return (
     <Grid item key={props.data.id} xs={12} sm={6}>
-      <Card sx={{ minWidth: 275 }}>
+      <Card sx={{ minWidth: 200 }}>
         <CardContent>
           <Typography variant="body2" color="text.secondary" gutterBottom>
             Rover

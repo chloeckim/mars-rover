@@ -2,18 +2,21 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { Button } from '@mui/material';
+import { ArrowBack } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 function Header(props) {
-  // TODO: Add app bar.
-  // TODO: Adjust the typography. Looks aweward in mobile right now.
   return (
     <Box
       sx={{
         bgcolor: 'background.paper',
-        pt: 8,
-        pb: 4,
+        py: 6
       }}
     >
+      <Container maxWidth="md">
+        {props.hasBackButton && <Button variant='text' startIcon={<ArrowBack />} component={Link} to={'/'}>Back</Button>}
+      </Container>
       <Container maxWidth="sm">
         <Typography
           component="h1"

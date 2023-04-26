@@ -12,7 +12,6 @@ import './App.css';
 const queryClient = new QueryClient();
 const theme = createTheme();
 
-// TODO: Add app bar.
 function App() {
   return (
     <ThemeProvider theme={theme}>
