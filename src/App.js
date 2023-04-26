@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
-import RoverList from './pages/RoverList';
+import Home from './pages/Home';
 import RoverDetail from './pages/RoverDetail';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<RoverList />} />
+          <Route index element={<Home />} />
           <Route path="rover-detail" element={<RoverDetail />} />
         </Route>
       </Routes>
