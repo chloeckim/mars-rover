@@ -2,9 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project uses [NASA's API](https://api.nasa.gov/) to show available Mars Rovers, and photos taken by the rovers.
 
-## Available Scripts
+## How to run the app
 
-In the project directory, you can run:
+### `npm install`
+
+Install all dependencies.
 
 ### `npm start`
 
