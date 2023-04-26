@@ -1,20 +1,34 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from './pages/Home';
 import RoverDetail from './pages/RoverDetail';
+import { ThemeProvider, createTheme } from '@mui/material';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import './App.css';
 
+const queryClient = new QueryClient();
+const theme = createTheme();
+
+// TODO: Add app bar.
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="rover-detail" element={<RoverDetail />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="photos/:name" element={<RoverDetail />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </LocalizationProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

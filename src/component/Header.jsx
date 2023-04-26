@@ -4,12 +4,14 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 function Header(props) {
-	return (
+  // TODO: Add app bar.
+  // TODO: Adjust the typography. Looks aweward in mobile right now.
+  return (
     <Box
       sx={{
         bgcolor: 'background.paper',
         pt: 8,
-        pb: 6,
+        pb: 4,
       }}
     >
       <Container maxWidth="sm">
