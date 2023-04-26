@@ -4,8 +4,7 @@ import { useQuery } from 'react-query';
 import RoverCard from './RoverCard';
 
 function RoverGrid() {
-  // const api_key = 'DEMO_KEY';
-  const api_key = 'nQBlOLY5fyAi89ZxiYMfp9SKAGDVDwAsbMqckfsS';
+  const api_key = 'DEMO_KEY';
 	const { isLoading, isError, data, error } = useQuery('rovers', () =>
     fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/?api_key=${api_key}`).then(res =>
       res.json()
