@@ -23,7 +23,7 @@ function RoverDetail() {
       <main>
         <Header hasBackButton title={`${capitalizedName}`} subtitle={`Photos taken by the ${capitalizedName} rover. Use the date picker to choose a date to see photos taken on that day.`} />
         <Container sx={{ pb: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }} maxWidth="sm">
-          <DatePicker defaultValue={date} value={date} onChange={(newValue) => setDate(newValue)} />
+          <DatePicker defaultValue={date} value={date} maxDate={dayjs()} onChange={(newValue) => setDate(newValue)} />
         </Container>
         <Container sx={{ display: 'flex', justifyContent: 'center' }} maxWidth="md">
           <RoverImageList name={name} date={date} />
